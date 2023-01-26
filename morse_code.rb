@@ -14,4 +14,14 @@ def decode_char(char)
     word
   end
   puts decode_word('-- -.--') #=> MY
+
+  def decode(str)
+    sentese = ''
+    arry = str.split('   ')
+    arry.each { |i| sentese += "#{decode_word(i)} " }
+    sentese
+  end
+  puts decode("-- -.--   -. .- -- .") #=> MY NAME
+  x = decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+  puts x
   
